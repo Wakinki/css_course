@@ -61,3 +61,70 @@ body {
       position: sticky;
       top: 100px;
 }
+
+/* ------------------------------------------- */
+
+html {
+      scroll-behavior: smooth;
+}
+
+section {
+      height: 100vh;
+}
+
+.blue {
+      background-color: darkblue;
+}
+
+.red {
+      background-color: darkred;
+}
+
+.green {
+      background-color: darkgreen;
+}
+
+header, footer {
+      color: #FFF;
+      text-align: center;
+      height: 100px;
+}
+
+header {
+      position: sticky;
+      top: 0;
+      font-size: 5rem;
+}
+
+footer {
+      background-color: #000;
+      position: fixed;
+      bottom:0;
+      padding: 0 1rem;
+      width: 100%;
+      font-size: 4rem;
+}
+
+footer a {
+      text-decoration: none;
+      color:#fff
+}
+
+footer a:visited {
+      color: #eee;
+}
+
+footer a:hover {
+      color: pink;
+}
+
+.social {
+      background-color: royalblue;
+      font-size: inherit;
+      color:#fff;
+      padding: 1rem;
+      position: fixed;
+      top: 30%;
+      left: 0;
+      z-index: 1;
+}
