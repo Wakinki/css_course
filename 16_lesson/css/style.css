@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+
+/* begin reset */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+img {
+      display: block;
+}
+
+/* END RESET */
+
+/*  utility classes */
+
+.nowrap {
+      white-space: nowrap;
+}
+
+.offscreen {
+      position: absolute;
+      left: -10000px;
+}
+
+/* end utility classes */
+
+.profile-pic-figure {
+      width: 25%;
+}
+
+.profile-pic-figure img{
+      width: 100%;
+      height: auto;
+      min-width: 100px;
+      border: 5px double white;
+      border-radius: 50%;
+}
+
+body {
+      font-family: "Nunito", sans-serif;
+      min-height: 100vh;
+      background-color: aliceblue;
+      /* background-image: url("../img/fire-frame-transparent-10-4265611487.png"),
+                        linear-gradient(to right, brown,red, #fff);
+      background-repeat: repeat-x, no-repeat;
+      background-position: left top;
+       */
+      background: repeat-x left top url("../img/fire-frame-transparent-10-4265611487.png"), no-repeat
+      linear-gradient(to right, brown,red, #fff); 
+      background-size: 100%, auto;
+}
+
+.hero {
+      border-bottom: 2px solid #000;
+      padding: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 30px;
+}
+
+.h1 {
+      font-size: 800%;
+      color: lavenderblush;
+     text-shadow: 3px 3px 0px black;
+      
+}
+
+.container {
+      background-color: rgb(100, 75, 50);
+      background-image: url('../img/lodenice\ \(16\ of\ 42\).jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+}
+
+.example {
+      margin-top: 1rem;
+      padding-left: 20px;
+      border: 1px solid red;
+}
+
+.example img {
+      width: 25%;
+      height: auto;
+}
+
+.clip {
+      font-weight: 900;
+      font-size: 20rem;
+      text-align: center;
+      background-image: url(../img/lodenice\ \(16\ of\ 42\).jpg);
+      background-size: 100%;
+      background-position: center;
+      text-transform: uppercase;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      
+}
