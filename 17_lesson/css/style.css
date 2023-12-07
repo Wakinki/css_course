@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+
+/* begin reset */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font: 1.5rem "Nunito", sans-serif;
+      min-height: 100vh;
+
+      background-color: #475569;
+      background-image: radial-gradient(whitesmoke, transparent);
+      display: flex;
+      flex-direction: column;
+}
+
+header, nav, main, footer {
+display: grid;
+place-content: center;
+grid-template-columns: 100%;
+text-align: center;
+}
+
+header, footer {
+      position: sticky;
+      background-color: hsla(217, 33%, 5%, 0.30);
+      color: whitesmoke;
+}
+
+header {
+      top: 0;
+}
+
+nav {
+      background-color: white;
+      color: black;
+      padding: 0.5rem;
+      border-bottom: 2px solid #475569;
+      display: flex;
+      gap: 2rem;
+}
+
+main {
+      flex-grow: 1;
+}
+
+footer {
+      bottom: 0;
+}
+
+/* || SMALL */
+
+@media screen and (min-width: 576px) {
+      body {
+            background-color: green;
+            background-image: radial-gradient(whitesmoke, transparent);
+      }
+      nav {
+            display: none;
+      }
+}
+
+/* || MEDUIM */
+
+@media screen and (min-width: 768px) {
+      body {
+            background-color: rgb(128, 0, 0);
+            background-image: radial-gradient(whitesmoke, transparent);
+      }
+}
+
+/* || LARGE */
+
+@media screen and (min-width: 992px) {
+      body {
+            background-color: rgb(13, 0, 128);
+            background-image: radial-gradient(whitesmoke, transparent);
+      }
+}
+
+/* || XL */
+
+@media screen and (min-width: 1200px) {
+      body {
+            background-color: rgb(92, 0, 128);
+            background-image: radial-gradient(whitesmoke, transparent);
+      }
+}
+
+/* || MOBILE DEVICE LANDSCAPE */
+
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
+      body {
+            background-color: rgb(0, 128, 117);
+            background-image: radial-gradient(whitesmoke, transparent);
+      }
+      h1, h2 {
+            font-size: 1rem;
+      }
+
+      nav {display: none}
+}
