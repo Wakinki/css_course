@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+
+/* begin reset */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font: 1.5rem "Nunito", sans-serif;
+      min-height: 100vh;
+
+      background-color: #475569;
+      background-image: radial-gradient(whitesmoke, transparent);
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+}
+
+.header, .footer {
+      display: grid;
+      place-content: center;
+      grid-template-columns: 100%;
+      text-align: center;
+}
+
+.header, .footer{
+      background-color: hsl(240, 40%, 20%);
+      color: white;
+}
+
+.navigation{
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      font-size: larger;
+      padding: 0.5rem;
+      background-color: white;
+      border-bottom: 2px solid black;
+}
+
+.navigation a {
+      padding: 1%;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+}
+.navigation a:hover {
+      color: grey;
+}
+.navigation a:focus {
+      background-color: #475569;
+      border-radius: 0.5rem;
+}
+.navigation a:active {
+      background-color: #475569;
+      border-radius: 0.5rem;
+      border-color: black;
+}
+
+.main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-grow: 1;
+}
+
+.footer {
+      bottom: 0;
+}
+
+.hero-card {
+      height: 30vh;
+      width: 200px;
+      background-color: #475569;
+}
+
+
+
+.hero-card img {
+      border:#475569 2px double;
+      border-radius: 50%;
+}
