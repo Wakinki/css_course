@@ -75,8 +75,9 @@ body {
 }
 
 .hero-card {
-      height: 30vh;
-      width: 200px;
+      padding: 20px;
+      height: 50svh;
+      aspect-ratio: 3 / 4;
       background-color: #475569;
 }
 
