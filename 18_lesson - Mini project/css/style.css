@@ -8,6 +8,13 @@
       box-sizing: border-box;
 }
 
+/* utility classes */
+.nowrap {
+      white-space: nowrap;
+}
+
+/* general styles */
+
 body {
       font: 1.5rem "Nunito", sans-serif;
       min-height: 100vh;
@@ -16,44 +23,42 @@ body {
       background-image: radial-gradient(whitesmoke, transparent);
       display: flex;
       flex-direction: column;
-      text-align: center;
 }
 
-.header, .footer {
+.header, 
+.footer {
+      position: sticky;
       display: grid;
       place-content: center;
       grid-template-columns: 100%;
       text-align: center;
+      background-color: #1e293b;
+      color: whitesmoke;
 }
 
-.header, .footer{
-      background-color: hsl(240, 40%, 20%);
-      color: white;
-}
 
 .navigation{
       display: flex;
       gap: 20px;
-      justify-content: center;
-      font-size: larger;
+      justify-content: space-evenly;
+      font-weight: bolder;
       padding: 0.5rem;
       background-color: white;
       border-bottom: 2px solid black;
 }
 
-.navigation a {
-      padding: 1%;
-      text-decoration: none;
+.navigation a, .navigation a:visited {
+      padding: 5px;
       color: black;
       font-weight: bold;
 }
-.navigation a:hover {
-      color: grey;
-}
-.navigation a:focus {
+.navigation a:hover, .navigation a:focus  {
+      color: whitesmoke;
       background-color: #475569;
       border-radius: 0.5rem;
 }
+
+      
 .navigation a:active {
       background-color: #475569;
       border-radius: 0.5rem;
@@ -64,8 +69,8 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 50px;
-      flex-direction: row;
+      gap: 1.5rem;
+      flex-direction: column;
       flex-wrap: wrap;
       flex-grow: 1;
 }
@@ -75,15 +80,36 @@ body {
 }
 
 .hero-card {
+      margin: 20px 0 20px 0;
       padding: 20px;
-      height: 50svh;
+      /* height: 50svh; */
+      width: 340px;
       aspect-ratio: 3 / 4;
-      background-color: #475569;
+      background-image: linear-gradient(grey, white);
+      border: 3px solid black;
+      border-radius: 30px;
+      overflow: hidden;
+      text-align: center;
 }
 
 
 
 .hero-card img {
-      border:#475569 2px double;
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border: 5px double black;
       border-radius: 50%;
+      
+}
+
+.hero-card figcaption {
+      
+}
+
+
+@media screen and (min-width: 576px){
+      .navigation{
+            display: none;
+      }
 }
