@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+
+/* begin reset */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+/* utility classes */
+.nowrap {
+      white-space: nowrap;
+}
+
+/* general styles */
+
+html {
+      scroll-behavior: smooth;
+}
+
+body {
+      font: 1.5rem "Nunito", sans-serif;
+      min-height: 100vh;
+
+      background-color: #475569;
+      background-image: radial-gradient(whitesmoke, transparent);
+      display: flex;
+      flex-direction: column;
+}
+
+.header, 
+.footer {
+      position: sticky;
+      text-align: center;
+      background-color: #1e293b;
+      color: whitesmoke;
+}
+
+.header {
+      top: 0;
+}
+
+
+.navigation{
+      display: flex;
+      justify-content: space-evenly;
+      font-weight: bolder;
+      padding: 0.5rem;
+      background-color: white;
+      border-bottom: 2px solid black;
+}
+
+
+.navigation a, .navigation a:visited {
+      padding: 5px;
+      color: black;
+      font-weight: bold;
+}
+.navigation a:hover, .navigation a:focus  {
+      color: whitesmoke;
+      background-color: #475569;
+      border-radius: 0.5rem;
+}
+
+      
+.navigation a:active {
+      background-color: #475569;
+      border-radius: 0.5rem;
+      border-color: black;
+}
+
+.main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1rem;
+}
+
+.footer {
+      bottom: 0;
+}
+
+.hero-card {
+      scroll-margin-top: 8rem;
+      padding: 1rem;
+      width: min(100%, 350px);
+      aspect-ratio: 3 / 4;
+      background-image: linear-gradient(grey, white);
+      border: 2px solid black;
+      border-radius: 30px;
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.hero-card figure {
+      display: flex;
+      flex-flow: column nowrap;
+}
+
+.hero-card img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border: 5px double #333;
+      border-radius: 50%;
+      
+}
+
+
+.hero-card figcaption {
+      font-weight: bolder;
+      font-size: 2rem;
+      margin: 1rem;
+      text-align: center;
+}
+
+
+@media screen and (min-width: 576px){
+      
+
+      .hero-card {
+            width: min(100%, 400px);
+      }
+
+      .hero-card:last-child {
+            order: -1;
+      }
+
+}
+
+@media screen and (min-width: 768px){
+      
+      .main {
+            justify-content: center;
+            flex-flow: row wrap;
+            padding: 1rem;
+      }
+
+      .hero-card {
+            width: min(100%, 325px);
+      }
+
+      .hero-card figure {
+            flex-flow: column-reverse;
+      }
+
+      .hero-card figcaption{
+            margin: 0.1em 0;
+      }
+
+      .card p {
+            margin-top: 1rem;
+      }
+
+      .navigation{
+            display: none;
+      }
+}
+
+@media screen and (min-width: 992px){ 
+      .hero-card {
+            width: min(100%, 400px);
+      }
+
+      .hero-card:nth-child(2) {
+            order: -1;
+      }
+}
+
+@media screen and (min-width: 1200px){ 
+     .hero-card{
+      width: min(calc(33% - 1rem), 500px);
+     }
+}
+
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
+      h1{
+            font-size: 1.5rem;
+      }
+
+      .navigation{
+            display: none;
+      }
+
+      .main {
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            align-items: stretch;
+      }
+      .hero-card {
+            width: min(calc(33% - 0.25rem)), 200px;
+      }
+
+      .hero-card figcaption, .hero-card p {
+            font-size: 1.25rem;
+      }
+
+}
