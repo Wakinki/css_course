@@ -8,27 +8,61 @@
       box-sizing: border-box;
 }
 
+/* variables */
+
+:root {
+      /* FONT */
+      --FF: "Nunito", sans-serif;
+      --FS: 1.5rem;
+      --FS-XL: 3rem;
+      /* COLOR */
+      --BGCOLOR: #475569;
+      --ALT-BGCOLOR: hsl(218, 44%, 8%);
+      --RADIAL-COLOR: whitesmoke;
+      --LIGHT-COLOR: whitesmoke;
+      --DARK-COLOR: #000;
+      /* SQUARE */
+      --SQUARE-BGCOLOR: papayawhip;
+      --SQUARE-SIZE: max(150px, 20vw);
+
+      /* GENERAL */
+      --PADDING: 0.5rem;
+      --SHADOW: 0 6px 5px -5px var(--DARK-COLOR);
+      --BORDER: 2px solid var(--ALT-BGCOLOR);
+}
+
+@media (prefers-color-scheme: dark) {
+      :root {
+            --BGCOLOR: #000;
+            --ALT-BGCOLOR: #333;
+            --RADIAL-COLOR: rgb(184, 184, 184);
+            --SQUARE-BGCOLOR: purple;
+            --LIGHT-COLOR:rgb(255, 255, 255);
+      }
+      
+}
+
 body {
-      font: 1.5rem "Nunito", sans-serif;
+      font: var(--FS) var(--FF);
       min-height: 100vh;
 
-      background-color: #475569;
-      background-image: radial-gradient(whitesmoke, transparent);
+      background-color: var(--BGCOLOR);
+      background-image: radial-gradient(var(--RADIAL-COLOR), transparent);
       display: flex;
       flex-direction: column;
 }
 
-header, nav, main, footer {
-display: grid;
-place-content: center;
-grid-template-columns: 100%;
-text-align: center;
+header, nav, footer {
+      display: grid;
+      place-content: center;
+      grid-template-columns: 100%;
+      text-align: center;
 }
 
 header, footer {
       position: sticky;
-      background-color: hsla(217, 33%, 5%, 0.30);
-      color: whitesmoke;
+      background-color: var(--ALT-BGCOLOR);
+      color: var(--LIGHT-COLOR);
 }
 
 header {
@@ -36,25 +70,52 @@ header {
 }
 
 nav {
-      background-color: white;
-      color: black;
-      padding: 0.5rem;
-      border-bottom: 2px solid #475569;
+      background-color: var(--LIGHT-COLOR);
+      color: var(--DARK-COLOR);
+      padding: var(--PADDING);
+      border-bottom: var(--BORDER);
       display: flex;
       gap: 2rem;
+      box-shadow: var(--SHADOW);
 }
 
 main {
       flex-grow: 1;
+
+      padding: 10px 0;
+      color: var(--DARK-COLOR);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-flow: row wrap;
+      gap: min(4vw, 15px);
 }
 
 footer {
       bottom: 0;
 }
 
+/* FEATURES */
+.square--highlight {
+      --SQUARE-BGCOLOR: cornflowerblue
+}
+
+
+.square {
+      background-color: var(--SQUARE-BGCOLOR);
+      width: var(--SQUARE-SIZE);
+      height: var(--SQUARE-SIZE);
+      border: var(--BORDER);
+      border-radius: 15px;
+      display: grid;
+      place-content: center;
+      font-size: var(--FS-XL);
+      box-shadow: var(--SHADOW);
+}
+
 /* || SMALL */
 
-@media screen and (min-width: 576px) {
+/* @media screen and (min-width: 576px) {
       body {
             background-color: green;
             background-image: radial-gradient(whitesmoke, transparent);
@@ -62,38 +123,38 @@ footer {
       nav {
             display: none;
       }
-}
+} */
 
 /* || MEDUIM */
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
       body {
             background-color: rgb(128, 0, 0);
             background-image: radial-gradient(whitesmoke, transparent);
       }
-}
+} */
 
 /* || LARGE */
 
-@media screen and (min-width: 992px) {
+/* @media screen and (min-width: 992px) {
       body {
             background-color: rgb(13, 0, 128);
             background-image: radial-gradient(whitesmoke, transparent);
       }
-}
+} */
 
 /* || XL */
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
       body {
             background-color: rgb(92, 0, 128);
             background-image: radial-gradient(whitesmoke, transparent);
       }
-}
+} */
 
 /* || MOBILE DEVICE LANDSCAPE */
 
-@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
+/* @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
       body {
             background-color: rgb(0, 128, 117);
             background-image: radial-gradient(whitesmoke, transparent);
@@ -103,4 +164,4 @@ footer {
       }
 
       nav {display: none}
-}
+} */
